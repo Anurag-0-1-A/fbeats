@@ -217,6 +217,26 @@ The packages installed are:
 |     RPi.bme280          |     Provides access to the BME280 temperature/pressure/humidity   sensor                                          |     Telemetry          |     None             |     Double    |     %       |
 |     grove.py            |     Provides access to the grove sensors including the Grove   capacitive moisture sensor and the Light sensor    |     Telemetry          |     None             |     Double    |     %       |
 
+Also, install the seeed-dht package with the following command.
+```
+!pip3 install seeed-python-dht 
+``` 
+
+## STEP 4: WRITE THE CODE
+### Define some environmental variables
+The connection details for the device ideally should not be stored in the source code. They should be saved on the device and loaded as required. This is to avoid checking these details into source code control or sharing them publicly accidentally.
+Python has a concept of .env files to store secrets such as connection details. These files are managed by the python-dotenv pip package and are usually ignored when checking into git.
+Create a new file inside the EnvironmentMonitorIoT folder called .env
+1.	Add the following entries to this file:
+2.	ID_SCOPE=<Id scope>
+DEVICE_ID=raspberry_pi
+PRIMARY_KEY=<primary key>
+3.	Set <Id scope> to be the value of the ID Scope from the Connect dialog in Azure IoT Central. Set <primary key> to be the Primary key value from this dialog.
+
+### Create the application code
+1.	Open the app.py file
+2.	Add the following code to the file:
+
 
 
 
