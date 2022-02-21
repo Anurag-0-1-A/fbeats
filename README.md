@@ -1,5 +1,5 @@
 # Table of Contents
-- [Azure Farmbeats: Plant Monitoring System](#azure-farmbeats--plant-monitoring-system)
+- [Azure Farmbeats: Plant Monitoring System](https://github.com/Anurag-0-1-A/fbeats/blob/main/README.md#azure-farmbeats-plant-monitoring-system)
   * [About Farmbeats](#about-farmbeats)
   * [Components Required](#components-required)
   * [STEP 1: INSTALL RASPBERRY PI OS (RASPBIAN) ON YOUR SD CARD](#step-1--install-raspberry-pi-os--raspbian--on-your-sd-card)
