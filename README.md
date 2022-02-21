@@ -1,3 +1,4 @@
+# Table of Contents
 - [Azure Farmbeats: Plant Monitoring System](#azure-farmbeats--plant-monitoring-system)
   * [About Farmbeats](#about-farmbeats)
   * [Components Required](#components-required)
