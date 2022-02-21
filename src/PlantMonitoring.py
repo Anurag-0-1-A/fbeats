@@ -3,7 +3,7 @@ from datetime import datetime, date
 import os, asyncio, json, time
 from dotenv import load_dotenv
 
-#temp and humidity
+#temperature and humidity
 import seeed_dht
 
 #moisture
