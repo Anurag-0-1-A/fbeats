@@ -45,58 +45,58 @@ Several studies have demonstrated the need to significantly increase the world�
 -	Humidity Sensor Sunlight sensor
 -	Capacitive Soil Moisture Sensor
 
-## STEP 1: INSTALL RASPBERRY PI OS (RASPBIAN) ON YOUR SD CARD
+## STEP 1: INSTALL RASPBERRY PI OS (RASPBIAN) ON OUR SD CARD
 ### Preparation
 -	This step can be completed using Windows, macOS, or Ubuntu
--	Have a Micro SD Card with an adapter to be able to use it on your PC
+-	Have a Micro SD Card with an adapter to be able to use it on our PC
 
 ### Download the Raspberry Pi Imager
--	You will need to install the latest version of Raspbian Lite on a micro-SD card. An easy way to do this is to install the Raspberry Pi Imager
+-	We will need to install the latest version of Raspbian Lite on a micro-SD card. An easy way to do this is to install the Raspberry Pi Imager
 -	Go to the Official Raspberry Pi Downloads Page.
--	Select the correct version of the Raspberry Pi Imager for your OS.
+-	Select the correct version of the Raspberry Pi Imager for our OS.
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image020.png)
 -	Install the Raspberry Pi Imager application and open it.
 -	Installing Raspberry Pi OS
--	Insert the microSD card into your computer or laptop. You may need to use the SD card adapter and plug it into a USB port on your PC.
+-	Insert the microSD card into our computer or laptop. we may need to use the SD card adapter and plug it into a USB port on our PC.
 -	Select CHOOSE OS to see a list of the available operating systems
 -	Select Raspberry Pi OS (32-bit)
 
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image021.png)
 
--	Next, select CHOOSE SD CARD and find the SD card that you would like to install the OS on
+-	Next, select CHOOSE SD CARD and find the SD card that we would like to install the OS on
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image023.png)
 -	Before hitting WRITE, press `Ctrl-Shift-X` to open a configuration menu like this.
--	Will display a window in which we will select the **Enable SSH** box, it will also request that we enter a password for the pi user, which is the user that comes by default in Raspberry pi, usually, the password is Raspberry for this user, but with this option, you can enter the one you like.
+-	Will display a window in which we will select the **Enable SSH** box, it will also request that we enter a password for the pi user, which is the user that comes by default in Raspberry pi, usually, the password is Raspberry for this user, but with this option, we can enter the one we like.
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image026.png)
 -	Going down further in this window we can find the **configure wifi** box where we enter the network name and password
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image028.png)
--	Select WRITE and wait for the process to complete before removing your SD card.
+-	Select WRITE and wait for the process to complete before removing our SD card.
 
-### Assemble your DIY Sensor Device Hardware
-Add the Grove Base Hat to your Raspberry Pi. Match the end pins up and press down firmly. Look at it from all angles to ensure that it is correctly connected.
+### Assemble our DIY Sensor Device Hardware
+Add the Grove Base Hat to our Raspberry Pi. Match the end pins up and press down firmly. Look at it from all angles to ensure that it is correctly connected.
 
 ### Insert the Micro SD Card
-On the bottom of the Raspberry Pi, there is a micro–SD card slot. Place your micro-SD card into this slot so that the printed side is visible. Push the card into the slot firmly. The SD card included in your kit will already be ready to use.  If there are any issues with the SD card see Appendix: Flashing the SD Card. Always remember to unplug the Raspberry Pi when inserting or removing the SD card.
+On the bottom of the Raspberry Pi, there is a micro–SD card slot. Place our micro-SD card into this slot so that the printed side is visible. Push the card into the slot firmly. The SD card included in our kit will already be ready to use.  If there are any issues with the SD card see Appendix: Flashing the SD Card. Always remember to unplug the Raspberry Pi when inserting or removing the SD card.
 
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image030.png)
 
--	Plug the Capacitive Soil Moisture Sensor into socket A2. If you have a second one plug it into A4.
+-	Plug the Capacitive Soil Moisture Sensor into socket A2. If we have a second one plug it into A4.
 -	Plug the Light Sensor into socket A0.
 -	Plug the Temperature & Humidity into the bottom left I2C socket.
--	Once all your sensors are plugged in you should have something that looks like this.
+-	Once all our sensors are plugged in we should have something that looks like this.
 ![image to be added from me of my iot setup]()
 
-### Power on your device
+### Power on our device
 -	Plug the large end of the micro-USB cable into the power adapter and insert the power adapter into a power source
 -	Plug the small end of the micro-USB cable into the Raspberry Pi and Power Up! A red light should shine on the motherboard.
 
 ### Configuring the Network Settings
-#### Setting up your Pi
-When powered on for the first time you need to do a few steps on the device. You will need to change your login password, set up or test your connection to the internet, and enable the I2C interface (required for using the grove sensors). Try SSHing into your Pi. From your computer connect to pi@raspberrypi.local.
+#### Setting up our Pi
+When powered on for the first time we need to do a few steps on the device. We will need to change our login password, set up or test our connection to the internet, and enable the I2C interface (required for using the grove sensors). Try SSHing into our Pi. From our computer connect to pi@raspberrypi.local.
 ```
 ssh pi@raspberrypi.local
 ```
-If the host cannot be found then if you know the IP address (for example by using your router's management software) then you can log in to pi@192.168.0.1, replacing 192.168.0.1 with the IP address of your Pi. This can be found by typing the following command into the terminal on your pi:
+If the host cannot be found then if we know the IP address (for example by using our router's management software) then we can log in to pi@192.168.0.1, replacing 192.168.0.1 with the IP address of our Pi. This can be found by typing the following command into the terminal on our pi:
 ```
 hostname -I
 ```
@@ -108,7 +108,7 @@ For the grove sensor to work, the I2C interface needs to be enabled.
 4.	Select OK to confirm the changes
 5.	Select Yes to reboot the system if prompted.
 
-The SSH connection will be terminated, so you will need to reconnect. Once the Pi reboots the I2C interface will be enabled.
+The SSH connection will be terminated, so we will need to reconnect. Once the Pi reboots the I2C interface will be enabled.
 
 ## STEP 2: AZURE SERVICES INTEGRATION
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image036.png)
@@ -116,7 +116,7 @@ The SSH connection will be terminated, so you will need to reconnect. Once the P
 Azure IoT Central is an IoT application platform that allows us to interact with cloud services and interact with them.
 IoT central has a user-friendly UI that allows us to monitor device conditions, create rules, and manage millions of devices easily.
 ### Create IoT Central Application from Portal
-1.	Log in to your Azure Portal.
+1.	Log in to our Azure Portal.
 2.	Click on + **Create a new resource**.
 
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image037.png)
@@ -126,26 +126,26 @@ IoT central has a user-friendly UI that allows us to monitor device conditions, 
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image038.png)
 
 4.	Fill in the details for the IoT App.
-  - 1. Give your app a name such as lab1sensor.
-  - 2. Select your subscription.
+  - 1. Give our app a name such as lab1sensor.
+  - 2. Select our subscription.
   - 3. Create a new resource group for the whole lab. In this case, I have named it Lab1.
 
-  Resource groups are logical groupings of Azure services, allowing you to manage all the services for a particular application or project together. At the end of this workshop, this Resource Group will be deleted, deleting all the services created.
+  Resource groups are logical groupings of Azure services, allowing we to manage all the services for a particular application or project together. At the end of this workshop, this Resource Group will be deleted, deleting all the services created.
   - 4. Select **Standard 1** for the Pricing plan.
   - 5. In this case we are going to create the app from scratch, so we chose a **custom application** in Template.
-  - 6. Select your location.
+  - 6. Select our location.
   - 7. Click on **Create**.
 
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image040.png)
 
-5.	After that, your IoT Central app will start the deployment. Once it is finished, just click on **Go to Resource**.
+5.	After that, our IoT Central app will start the deployment. Once it is finished, just click on **Go to Resource**.
 6.	To access the IoT Application Dashboard just press on the **IoT Central Application URL hyperlink**.
 
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image043.png)
 
 ### Create a Device Template
 Azure IoT Central can work with multiple types of devices, and multiple devices per device type. Device types are defined using templates - these specify the capabilities of the device including the telemetry that can be received from the device and commands that can be sent to it.
-The environment sensor captures temperature, humidity, air pressure, soil moisture, and light conditions. You will need to define a template that has these values on it, so they can be received from the Pi.
+The environment sensor captures temperature, humidity, air pressure, soil moisture, and light conditions. We will need to define a template that has these values on it, so they can be received from the Pi.
 1.	From the left panel select **Device Template**. Then click on **+ New**.
 
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image045.png)
