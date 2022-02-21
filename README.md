@@ -1,18 +1,20 @@
 # Table of Contents
+
 changes required in toc as per the whole readme edits/........
-- [Azure Farmbeats: Plant Monitoring System](https://github.com/Anurag-0-1-A/fbeats/blob/main/README.md#azure-farmbeats-plant-monitoring-system)
-  * [About Farmbeats](#about-farmbeats)
+<!-- TOC start -->
+- [Azure Farmbeats: Plant Monitoring System](#azure-farmbeats-plant-monitoring-system)
+  * [About Farmbeats ](#about-farmbeats)
   * [Components Required](#components-required)
-  * [STEP 1: INSTALL RASPBERRY PI OS (RASPBIAN) ON YOUR SD CARD](#step-1--install-raspberry-pi-os--raspbian--on-your-sd-card)
+  * [STEP 1: INSTALL RASPBERRY PI OS (RASPBIAN) ON OUR SD CARD](#step-1-install-raspberry-pi-os-raspbian-on-our-sd-card)
     + [Preparation](#preparation)
     + [Download the Raspberry Pi Imager](#download-the-raspberry-pi-imager)
-    + [Assemble your DIY Sensor Device Hardware](#assemble-your-diy-sensor-device-hardware)
+    + [Assemble our DIY Sensor Device Hardware](#assemble-our-diy-sensor-device-hardware)
     + [Insert the Micro SD Card](#insert-the-micro-sd-card)
-    + [Power on your device](#power-on-your-device)
+    + [Power on our device](#power-on-our-device)
     + [Configuring the Network Settings](#configuring-the-network-settings)
-      - [Setting up your Pi](#setting-up-your-pi)
+      - [Setting up our Pi](#setting-up-our-pi)
     + [Turn on the I2C interface](#turn-on-the-i2c-interface)
-  * [STEP 2: AZURE SERVICES INTEGRATION](#step-2--azure-services-integration)
+  * [STEP 2: AZURE SERVICES INTEGRATION](#step-2-azure-services-integration)
     + [Create App using IoT Central](#create-app-using-iot-central)
     + [Create IoT Central Application from Portal](#create-iot-central-application-from-portal)
     + [Create a Device Template](#create-a-device-template)
@@ -20,13 +22,14 @@ changes required in toc as per the whole readme edits/........
     + [Publish the device template](#publish-the-device-template)
     + [Create a device](#create-a-device)
     + [Get the device connection details](#get-the-device-connection-details)
-  * [STEP3: INSTALLING PYTHON 3](#step3--installing-python-3)
+  * [STEP3: INSTALLING PYTHON 3](#step3-installing-python-3)
     + [Configure a virtual environment](#configure-a-virtual-environment)
     + [Install the required python packages](#install-the-required-python-packages)
-  * [STEP 4: WRITE THE CODE](#step-4--write-the-code)
+  * [STEP 4: WRITE THE CODE](#step-4-write-the-code)
     + [Define some environmental variables](#define-some-environmental-variables)
     + [Create the application code](#create-the-application-code)
     + [Check that the connection has been established](#check-that-the-connection-has-been-established)
+<!-- TOC end -->
 
 
 # Azure Farmbeats: Plant Monitoring System
