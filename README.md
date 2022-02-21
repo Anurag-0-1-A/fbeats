@@ -59,9 +59,9 @@ Several studies have demonstrated the need to significantly increase the world�
 -	Select CHOOSE OS to see a list of the available operating systems
 -	Select Raspberry Pi OS (32-bit)
 -	Next, select CHOOSE SD CARD and find the SD card that you would like to install the OS on
--	Before hitting WRITE, press “Ctrl-Shift-X” to open a configuration menu like this.
--	Will display a window in which we will select the “Enable SSH” box, it will also request that we enter a password for the pi user, which is the user that comes by default in Raspberry pi, usually, the password is Raspberry for this user, but with this option, you can enter the one you like.
--	Going down further in this window we can find the “configure wifi” box where we enter the network name and password
+-	Before hitting WRITE, press `Ctrl-Shift-X` to open a configuration menu like this.
+-	Will display a window in which we will select the **Enable SSH** box, it will also request that we enter a password for the pi user, which is the user that comes by default in Raspberry pi, usually, the password is Raspberry for this user, but with this option, you can enter the one you like.
+-	Going down further in this window we can find the **configure wifi** box where we enter the network name and password
 -	Select WRITE and wait for the process to complete before removing your SD card.
 
 ### Assemble your DIY Sensor Device Hardware
@@ -92,8 +92,8 @@ hostname -I
 ### Turn on the I2C interface
 For the grove sensor to work, the I2C interface needs to be enabled.
 1.	Launch the configuration tool on the Pi, found under Menu > Preferences > Raspberry Pi Configuration
-2.	Select the “Interfaces” tab
-3.	Set I2C to “Enabled”
+2.	Select the **Interfaces** tab
+3.	Set I2C to **Enabled**
 4.	Select OK to confirm the changes
 5.	Select Yes to reboot the system if prompted.
 
@@ -105,50 +105,50 @@ Azure IoT Central is an IoT application platform that allows us to interact with
 IoT central has a user-friendly UI that allows us to monitor device conditions, create rules, and manage millions of devices easily.
 ### Create IoT Central Application from Portal
 1.	Log in to your Azure Portal.
-2.	Click on + Create a new resource.
-3.	Search IoT Central and click on IoT Central Application. Then click on Create. 
+2.	Click on + **Create a new resource**.
+3.	Search IoT Central and click on **IoT Central Application**. Then click on **Create**. 
 4.	Fill in the details for the IoT App.
   - 1. Give your app a name such as lab1sensor.
   - 2. Select your subscription.
   - 3. Create a new resource group for the whole lab. In this case, I have named it Lab1.
 
   Resource groups are logical groupings of Azure services, allowing you to manage all the services for a particular application or project together. At the end of this workshop, this Resource Group will be deleted, deleting all the services created.
-  - 4. Select Standard 1 for the Pricing plan.
-  - 5. In this case we are going to create the app from scratch, so we chose a custom application in Template.
+  - 4. Select **Standard 1** for the Pricing plan.
+  - 5. In this case we are going to create the app from scratch, so we chose a **custom application** in Template.
   - 6. Select your location.
-  - 7. Click on Create.
-5.	After that, your IoT Central app will start the deployment. Once it is finished, just click on Go to Resource.
-6.	To access the IoT Application Dashboard just press on the IoT Central Application URL hyperlink.
+  - 7. Click on **Create**.
+5.	After that, your IoT Central app will start the deployment. Once it is finished, just click on **Go to Resource**.
+6.	To access the IoT Application Dashboard just press on the **IoT Central Application URL hyperlink**.
 
 ### Create a Device Template
 Azure IoT Central can work with multiple types of devices, and multiple devices per device type. Device types are defined using templates - these specify the capabilities of the device including the telemetry that can be received from the device and commands that can be sent to it.
 The environment sensor captures temperature, humidity, air pressure, soil moisture, and light conditions. You will need to define a template that has these values on it, so they can be received from the Pi.
-1.	From the left panel select Device Template. Then click on + New.
-2.	Select the IoT Device template.
-3.	Select the Next: Customize button.
-4.	Select the Next: Review button.
-5.	Select the Create button.
-6.	Name the template SensorMonitor.
+1.	From the left panel select **Device Template**. Then click on **+ New**.
+2.	Select the **IoT Device** template.
+3.	Select the **Next: Customize** button.
+4.	Select the **Next: Review** button.
+5.	Select the **Create button**.
+6.	Name the template `SensorMonitor`.
 
 Once the template is created, you need to add capabilities to it. These are defined using capability models, which define the capabilities of all devices that will use this template. Capability models are made up of three parts:
--	Interfaces - these are reusable collections of capabilities and are grouped into three categories:
-  - 1.	Telemetry - actual values detected and sent by the device, for example in a thermostat it could be the current detected temperature
-  - 2.	Properties - settings on the device, for example in a thermostat it could be the desired temperature. These can be set by the device, or via Azure IoT Central and synced to the device.
-  - 3.	Commands - calls that can be made on the device, optionally passing data. For example, in a thermostat, it could be called by a mobile app to send a request to change the desired temperature.
--	Cloud properties - these are properties set in Azure IoT Central against a device, but not synced to the device. For example, a device could have a cloud property for the account name of the owner, the devices’ location, or the date it was last serviced.
--	Views - these are dashboards for a device that can contain charts, data values, and other information allowing you to visualize telemetry or send commands.
+-	**Interfaces** - these are reusable collections of capabilities and are grouped into three categories:
+  - 1.	**Telemetry** - actual values detected and sent by the device, for example in a thermostat it could be the current detected temperature
+  - 2.	**Properties** - settings on the device, for example in a thermostat it could be the desired temperature. These can be set by the device, or via Azure IoT Central and synced to the device.
+  - 3.	**Commands** - calls that can be made on the device, optionally passing data. For example, in a thermostat, it could be called by a mobile app to send a request to change the desired temperature.
+-	**Cloud properties** - these are properties set in Azure IoT Central against a device, but not synced to the device. For example, a device could have a cloud property for the account name of the owner, the devices’ location, or the date it was last serviced.
+-	**Views** - these are dashboards for a device that can contain charts, data values, and other information allowing you to visualize telemetry or send commands.
 The environment sensor needs a capability model created, with an interface defined for the telemetry values being sent, a command to indicate that the plant needs watering, and a view to visualize these values.
-1.	Select the Custom capability model
-Add an interface
-2.	Add a new interface to the capability model by selecting the top-level Environment sensor item in the menu and selecting +Add interface
-3.	Select Custom
+1.	Select the **Custom** capability model
+**Add an interface**
+2.	Add a new interface to the capability model by selecting the top-level Environment sensor item in the menu and selecting **+Add interface**
+3.	Select **Custom**
 4.	This interface needs 5 telemetry values added to it for the temperature, humidity, soil moisture, and light level. Telemetry values have the following properties:
--	Display name - this defines what is shown on a view to display the value
--	Name - this map to the values being sent from the device
--	Capability type - this defines what type of value this is, and includes some standard types such as temperature or pressure.
--	Schema - this defines the data type for the value being received, such as an integer or a floating-point number
--	Unit - this defines the unit, for now, telemetry types, for example, °C for temperatures.
--	Select the + Add capability button to add new capabilities, and add the following five values:
+-	**Display name** - this defines what is shown on a view to display the value
+-	**Name** - this map to the values being sent from the device
+-	**Capability type** - this defines what type of value this is, and includes some standard types such as temperature or pressure.
+-	**Schema** - this defines the data type for the value being received, such as an integer or a floating-point number
+-	**Unit** - this defines the unit, for now, telemetry types, for example, °C for temperatures.
+-	Select the **+ Add capability** button to add new capabilities, and add the following five values:
 
 Display Name	Name	Capability Type	Semantic Type	Schema	Unit
 Temperature	temperature	Telemetry	Temperature	Double	°C
@@ -180,13 +180,13 @@ Here is an example of how it can look like.
 
 ### Publish the device template
 Before the device template can be assigned to a device, it needs to be published. Once published, any interfaces defined on it cannot be changed, instead, a new version of the device template needs to be created.
-1.	Select the Publish button from the top-most menu.
-2.  Click on Publish.
+1.	Select the **Publish** button from the top-most menu.
+2.  Click on **Publish**.
 
 ### Create a device
-1.	Go to Devices > SensorMonitor.
-2.	Select + New.
-3.	Set the Device Name to Raspberry pi and the Device Id to raspberry_pi. Then click on Create.
+1.	Go to **Devices > SensorMonitor**.
+2.	Select **+ New**.
+3.	Set the **Device Name** to `Raspberry pi` and the Device Id to `raspberry_pi`. Then click on **Create**.
 
 A new device should appear in the devices list.
 
@@ -194,7 +194,7 @@ A new device should appear in the devices list.
 Each device has a set of connection details that will be used on the actual device to connect to Azure IoT Central and send telemetry.
 1.	Click on the Raspberry pi device you have just created.
 2.	Click on the Connect button located at the top right corner.
-3.	Take note of the ID Scope, Device Id, and Primary key. You will need these values to send the data from the raspberry pi.
+3.	Take note of the **ID Scope, Device Id, and Primary key**. You will need these values to send the data from the raspberry pi.
 
 ## STEP3: INSTALLING PYTHON 3
 By default, Raspbian (Stretch version April 2018 and earlier) uses Python 2. However, versions 2 and 3 come installed by default. We just have to make 1 minor change so that the Pi uses Python 3 whenever we type python into a terminal. In a terminal window, enter the following command:
@@ -217,16 +217,18 @@ sudo apt-get update
 ```
 sudo apt-get install python3-venv
 ```
-Create a new file inside the EnvironmentMonitor folder called app.py
+Create a new file inside the `EnvironmentMonitor` folder called `app.py`
 
 1.	Name the new file app.py and press return
-2.	Create a new virtual environment called .venv using Python 3 by running the following command in the terminal
+2.	Create a new virtual environment called **.venv** using Python 3 by running the following command in the terminal
+```
 python3 -m venv .venv
-3.	A dialog will pop up asking if you want to activate this virtual environment. Select Yes.
+```
+3.	A dialog will pop up asking if you want to activate this virtual environment. Select **Yes**.
 
 ### Install the required python packages
 Python has a package manager called pip that allows you to install code from other developers in packages called pip packages. You can read more about pip and see the available packages at pypi.org. Packages can either be installed into the virtual environment one at a time using the pip command, or multiple packages can be listed in a file called requirements.txt and installed together. The advantage of using a requirements.txt file is that this can be checked into source code control so that other developers can configure their environment the same way by installing the same packages from this file.
-1.	Create a new file inside the EnvironmentMonitorIoT folder called requirements.txt
+1.	Create a new file inside the EnvironmentMonitorIoT folder called `requirements.txt`
 2.	Add the following to this file
 ```
 azure-iot-device
@@ -256,10 +258,10 @@ Also, install the seeed-dht package with the following command.
 ### Define some environmental variables
 The connection details for the device ideally should not be stored in the source code. They should be saved on the device and loaded as required. This is to avoid checking these details into source code control or sharing them publicly accidentally.
 Python has a concept of .env files to store secrets such as connection details. These files are managed by the python-dotenv pip package and are usually ignored when checking into git.
-Create a new file inside the EnvironmentMonitorIoT folder called .env
+Create a new file inside the EnvironmentMonitorIoT folder called `.env`
 1.	Add the following entries to this file:
 2.	ID_SCOPE=<Id scope>
-DEVICE_ID=raspberry_pi
+DEVICE_ID=`raspberry_pi`
 PRIMARY_KEY=<primary key>
 3.	Set <Id scope> to be the value of the ID Scope from the Connect dialog in Azure IoT Central. Set <primary key> to be the Primary key value from this dialog.
 
