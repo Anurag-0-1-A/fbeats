@@ -150,12 +150,12 @@ IoT central has a user-friendly UI that allows us to monitor device conditions, 
   - 6. Select our location.
   - 7. Click on **Create**.
 
-![replace this image with urs](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image040.png)
+![replace this image with urs](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/azresource2.png)
 
 5.	After that, our IoT Central app will start the deployment. Once it is finished, just click on **Go to Resource**.
 6.	To access the IoT Application Dashboard just press on the **IoT Central Application URL hyperlink**.
 
-![replace this image with urs](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image043.png)
+![replace this image with urs](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/azresource.png)
 
 ### Create a Device Template
 Azure IoT Central can work with multiple types of devices, and multiple devices per device type. Device types are defined using templates - these specify the capabilities of the device including the telemetry that can be received from the device and commands that can be sent to it.
