@@ -1,3 +1,12 @@
+## ⚡ Technologies Learnt
+![Raspberry Pi](https://img.shields.io/badge/-Raspberry%20Pi-C51A4A?style=flat-square&logo=Raspberry-Pi)
+![Linux](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=2bbc8a)
+![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python)
+![Microsoft Azure](https://img.shields.io/badge/Microsoft%20Azure-232F7E?style=flat-square&logo=microsoft-azure)
+![Azure-IoT hub](https://img.shields.io/badge/Azure--IotHub-Azure--IotHub-blue)
+
+
+
 # Table of Contents
 
 changes required in toc as per the whole readme edits/........
