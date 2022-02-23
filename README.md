@@ -5,12 +5,12 @@ changes required in toc as per the whole readme edits/........
 - [Azure Farmbeats: Plant Monitoring System](#azure-farmbeats-plant-monitoring-system)
   * [About Farmbeats ](#about-farmbeats)
   * [Components Required](#components-required)
-  * [STEP 1: INSTALL RASPBERRY PI OS (RASPBIAN) ON OUR SD CARD](#step-1-install-raspberry-pi-os-raspbian-on-our-sd-card)
+  * [STEP 1: INSTALLING RASPBERRY PI OS (RASPBIAN) ON OUR SD CARD](#step-1-installing-raspberry-pi-os-raspbian-on-our-sd-card)
     + [Preparation](#preparation)
     + [Download the Raspberry Pi Imager](#download-the-raspberry-pi-imager)
-    + [Assemble our DIY Sensor Device Hardware](#assemble-our-diy-sensor-device-hardware)
+    + [Assemble the DIY Sensor Device Hardware](#assemble-the-diy-sensor-device-hardware)
     + [Insert the Micro SD Card](#insert-the-micro-sd-card)
-    + [Power on our device](#power-on-our-device)
+    + [Power on the device](#power-on-the-device)
     + [Configuring the Network Settings](#configuring-the-network-settings)
       - [Setting up our Pi](#setting-up-our-pi)
     + [Turn on the I2C interface](#turn-on-the-i2c-interface)
@@ -137,7 +137,7 @@ IoT central has a user-friendly UI that allows us to monitor device conditions, 
 
   Resource groups are logical groupings of Azure services, allowing us to manage all the services for a particular application or project together. 
   - 4. Select **Standard 1** for the Pricing plan.
-  - 5. In this case I am going to create the app from scratch, so I chose a **custom application** in Template.
+  - 5. In this case, I am going to create the app from scratch, so I chose a **custom application** in Template.
   - 6. Select our location.
   - 7. Click on **Create**.
 
@@ -222,7 +222,7 @@ The environment sensor needs a capability model created, with an interface defin
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image061.png)
 
 8.	We can create another view showing just the last value received if we want.
-Here is an example of how it can look like.
+Here is an example of what it can look like.
 
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/image063.png)
 
@@ -316,7 +316,7 @@ The packages installed are:
 |     azure-iot-device    |     Allows communication with Azure IoT services including   Visual Studio Code                                   |     Telemetry          |     Temperature      |     Double    |     °C      |
 |     python-dotenv       |     Allows loading of environment variables   from .env files                                                     |     Telemetry          |     Humidity         |     Double    |     %       |
 |     RPi.bme280          |     Provides access to the BME280 temperature/pressure/humidity   sensor                                          |     Telemetry          |     None             |     Double    |     %       |
-|     grove.py            |     Provides access to the grove sensors including the Grove   capacitive moisture sensor and the Light sensor    |     Telemetry          |     None             |     Double    |     %       |
+|     grove.py            |     Provides access to the grove sensors including the Grove capacitive moisture sensor and the Light sensor    |     Telemetry          |     None             |     Double    |     %       |
 
 Also, install the seeed-dht package with the following command.
 ```
@@ -510,7 +510,6 @@ The app should start, connect to Azure IoT Hub, and send data. The data being se
 3.	The view will load, and there should be data visible that matches the data being sent
 
 ![](image to be added by me of iot live monitoring dashboard)
-
 
 
 
