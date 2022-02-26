@@ -9,7 +9,6 @@
 
 # Table of Contents
 
-changes required in toc as per the whole readme edits/........
 <!-- TOC start -->
 - [Azure Farmbeats: Plant Monitoring System](#azure-farmbeats-plant-monitoring-system)
   * [About Farmbeats ](#about-farmbeats)
