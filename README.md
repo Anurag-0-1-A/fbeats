@@ -98,7 +98,7 @@ On the bottom of the Raspberry Pi, there is a micro–SD card slot. Place the mi
 -	Plug the Light Sensor into socket A0.
 -	Plug the Temperature & Humidity into the bottom left I2C socket.
 -	Once all our sensors are plugged in, we should have something that looks like this.
-![image to be added from me of my iot setup]()
+![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/iotsetup.jpg)
 
 ### Power on the device
 -	Plug the large end of the micro-USB cable into the power adapter and insert the power adapter into a power source
