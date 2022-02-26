@@ -37,6 +37,7 @@
     + [Define some environmental variables](#define-some-environmental-variables)
     + [Create the application code](#create-the-application-code)
     + [Check that the connection has been established](#check-that-the-connection-has-been-established)
+- [:film_projector: Presentation + Demo ](#film_projector-presentation--demo)
 <!-- TOC end -->
 
 
@@ -520,5 +521,6 @@ The app should start, connect to Azure IoT Hub, and send data. The data being se
 
 ![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/azfbapp.png)
 
-
+# :film_projector: Presentation + Demo 
+[![Youtube Demo Video](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/thumbnail.png)](https://www.youtube.com/watch?v=3aq-GquDmZg)
 
