@@ -512,13 +512,14 @@ if __name__ == '__main__':
 python3 app.py
 ```
 The app should start, connect to Azure IoT Hub, and send data. The data being sent will be printed to the terminal
+![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/azfboutput.png)
   
 ### Check that the connection has been established
 1.	Open the app in Azure IoT Central
 2.	From the Devices tab, select the Raspberry Pi device
 3.	The view will load, and there should be data visible that matches the data being sent
 
-![](image to be added by me of iot live monitoring dashboard)
+![](https://github.com/Anurag-0-1-A/fbeats/blob/main/Images/azfbapp.png)
 
 
 
